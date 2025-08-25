@@ -7,7 +7,20 @@
   },
   "options": {},
   "attributes": {
-    "body": {
+    "SectionImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "SectionTitle": {
+      "type": "string"
+    },
+    "SectionContent": {
       "type": "richtext"
     }
   }

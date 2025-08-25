@@ -1,0 +1,87 @@
+{
+  "kind": "collectionType",
+  "collectionName": "testimonials",
+  "info": {
+    "singularName": "testimonial",
+    "pluralName": "testimonials",
+    "displayName": "Testimonial"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Heading1stline": {
+      "type": "string"
+    },
+    "Heading2ndline": {
+      "type": "text"
+    },
+    "ShortDescription": {
+      "type": "text"
+    },
+    "Industry": {
+      "type": "string"
+    },
+    "chip": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category",
+      "mappedBy": "testimonial"
+    },
+    "Awards": {
+      "type": "string"
+    },
+    "HeroSectionImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Heading2": {
+      "type": "string"
+    },
+    "Subheading2": {
+      "type": "text"
+    },
+    "WorkCover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ChallenegeDescription": {
+      "type": "text"
+    },
+    "SolutionHeading": {
+      "type": "string"
+    },
+    "SolutionImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "SolutionContent": {
+      "type": "richtext"
+    },
+    "Blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.rich-text"
+      ]
+    }
+  }
+}
