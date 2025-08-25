@@ -132,11 +132,26 @@
       "type": "richtext",
       "required": true
     },
+    "SEO_Title_Tag": {
+      "type": "string",
+      "required": true
+    },
+    "SEO_Meta_Description": {
+      "type": "text",
+      "required": true
+    },
     "Blocks": {
       "type": "dynamiczone",
       "components": [
-        "shared.rich-text"
+        "shared.rich-text",
+        "shared.review"
       ]
+    },
+    "SEO": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false,
+      "required": true
     }
   }
 }

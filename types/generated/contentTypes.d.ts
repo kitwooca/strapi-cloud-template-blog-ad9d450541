@@ -552,7 +552,7 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
   attributes: {
     AwardIcon: Schema.Attribute.Media<'images' | 'files'>;
     Awards: Schema.Attribute.String;
-    Blocks: Schema.Attribute.DynamicZone<['shared.rich-text']>;
+    Blocks: Schema.Attribute.DynamicZone<['shared.rich-text', 'shared.review']>;
     ChallenegeDescription: Schema.Attribute.Text & Schema.Attribute.Required;
     chip: Schema.Attribute.Relation<'oneToMany', 'api::category.category'>;
     createdAt: Schema.Attribute.DateTime;
@@ -577,6 +577,10 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     logo: Schema.Attribute.Media<'images' | 'files'>;
     publishedAt: Schema.Attribute.DateTime;
+    SEO: Schema.Attribute.Component<'shared.seo', false> &
+      Schema.Attribute.Required;
+    SEO_Meta_Description: Schema.Attribute.Text & Schema.Attribute.Required;
+    SEO_Title_Tag: Schema.Attribute.String & Schema.Attribute.Required;
     ShortDescription: Schema.Attribute.Text;
     SolutionContent: Schema.Attribute.RichText & Schema.Attribute.Required;
     SolutionHeading: Schema.Attribute.String & Schema.Attribute.Required;
