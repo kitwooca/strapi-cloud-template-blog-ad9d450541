@@ -7,7 +7,17 @@
   },
   "options": {},
   "attributes": {
-    "SectionImage": {
+    "SectionImage_desktop": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "SectionImage_mobile": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [

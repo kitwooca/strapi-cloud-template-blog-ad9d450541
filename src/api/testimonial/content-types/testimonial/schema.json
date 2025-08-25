@@ -11,8 +11,37 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "ThumbnailPic": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "AwardIcon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
     "Heading1stline": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Heading2ndline": {
       "type": "text"
@@ -32,7 +61,18 @@
     "Awards": {
       "type": "string"
     },
-    "HeroSectionImage": {
+    "HeroSectionImage_desktopp": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "HeroSectionImage_mobile": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -43,12 +83,24 @@
       ]
     },
     "Heading2": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Subheading2": {
       "type": "text"
     },
-    "WorkCover": {
+    "WorkCover_desktop": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "WorkCover_mobile": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -59,10 +111,12 @@
       ]
     },
     "ChallenegeDescription": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "SolutionHeading": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "SolutionImage": {
       "type": "media",
@@ -75,7 +129,8 @@
       ]
     },
     "SolutionContent": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "Blocks": {
       "type": "dynamiczone",

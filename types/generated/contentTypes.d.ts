@@ -550,17 +550,22 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    AwardIcon: Schema.Attribute.Media<'images' | 'files'>;
     Awards: Schema.Attribute.String;
     Blocks: Schema.Attribute.DynamicZone<['shared.rich-text']>;
-    ChallenegeDescription: Schema.Attribute.Text;
+    ChallenegeDescription: Schema.Attribute.Text & Schema.Attribute.Required;
     chip: Schema.Attribute.Relation<'oneToMany', 'api::category.category'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Heading1stline: Schema.Attribute.String;
-    Heading2: Schema.Attribute.String;
+    Heading1stline: Schema.Attribute.String & Schema.Attribute.Required;
+    Heading2: Schema.Attribute.String & Schema.Attribute.Required;
     Heading2ndline: Schema.Attribute.Text;
-    HeroSectionImage: Schema.Attribute.Media<
+    HeroSectionImage_desktopp: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.Required;
+    HeroSectionImage_mobile: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
     Industry: Schema.Attribute.String;
@@ -570,18 +575,29 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
       'api::testimonial.testimonial'
     > &
       Schema.Attribute.Private;
+    logo: Schema.Attribute.Media<'images' | 'files'>;
     publishedAt: Schema.Attribute.DateTime;
     ShortDescription: Schema.Attribute.Text;
-    SolutionContent: Schema.Attribute.RichText;
-    SolutionHeading: Schema.Attribute.String;
+    SolutionContent: Schema.Attribute.RichText & Schema.Attribute.Required;
+    SolutionHeading: Schema.Attribute.String & Schema.Attribute.Required;
     SolutionImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
     Subheading2: Schema.Attribute.Text;
+    ThumbnailPic: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    WorkCover: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    WorkCover_desktop: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.Required;
+    WorkCover_mobile: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
   };
 }
 

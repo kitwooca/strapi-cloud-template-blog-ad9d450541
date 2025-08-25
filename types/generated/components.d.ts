@@ -32,7 +32,10 @@ export interface SharedRichText extends Struct.ComponentSchema {
   };
   attributes: {
     SectionContent: Schema.Attribute.RichText;
-    SectionImage: Schema.Attribute.Media<
+    SectionImage_desktop: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    SectionImage_mobile: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
     SectionTitle: Schema.Attribute.String;
