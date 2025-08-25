@@ -579,8 +579,6 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     SEO: Schema.Attribute.Component<'shared.seo', false> &
       Schema.Attribute.Required;
-    SEO_Meta_Description: Schema.Attribute.Text & Schema.Attribute.Required;
-    SEO_Title_Tag: Schema.Attribute.String & Schema.Attribute.Required;
     ShortDescription: Schema.Attribute.Text;
     SolutionContent: Schema.Attribute.RichText & Schema.Attribute.Required;
     SolutionHeading: Schema.Attribute.String & Schema.Attribute.Required;
