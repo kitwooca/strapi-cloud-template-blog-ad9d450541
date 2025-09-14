@@ -52,11 +52,11 @@
     "Industry": {
       "type": "string"
     },
-    "chip": {
+    "chips": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::category.category",
-      "mappedBy": "testimonial"
+      "mappedBy": "testimonials"
     },
     "Awards": {
       "type": "string"
