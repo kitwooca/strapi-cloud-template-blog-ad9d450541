@@ -18,9 +18,9 @@
     "description": {
       "type": "text"
     },
-    "testimonials": {
+    "testimonial": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::testimonial.testimonial",
       "inversedBy": "chips"
     }
