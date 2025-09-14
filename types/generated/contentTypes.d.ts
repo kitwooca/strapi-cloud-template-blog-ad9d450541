@@ -497,8 +497,8 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    testimonial: Schema.Attribute.Relation<
-      'manyToOne',
+    testimonials: Schema.Attribute.Relation<
+      'manyToMany',
       'api::testimonial.testimonial'
     >;
     updatedAt: Schema.Attribute.DateTime;
@@ -554,7 +554,7 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
     Awards: Schema.Attribute.String;
     Blocks: Schema.Attribute.DynamicZone<['shared.rich-text', 'shared.review']>;
     ChallenegeDescription: Schema.Attribute.Text & Schema.Attribute.Required;
-    chips: Schema.Attribute.Relation<'oneToMany', 'api::category.category'>;
+    chips: Schema.Attribute.Relation<'manyToMany', 'api::category.category'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
